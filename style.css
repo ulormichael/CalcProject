@@ -1,3 +1,8 @@
+body{
+    background-image: linear-gradient(to bottom right,
+    rgba(189,13,34,1),rgba(2,0,184,1), rgba(0,0,0,1));
+}
+
 html {
     text-align: center;
     font-family: monospace;
@@ -11,7 +16,6 @@ html {
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    background-color: azure;
 }
 
 #container {
