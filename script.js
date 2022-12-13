@@ -14,8 +14,8 @@ window.addEventListener('keydown', function(e){
 function updateDisplay() {
     const display = document.getElementById('display');
     display.innerText = displayValue;
-    if(displayValue.length > 9) {
-        display.innerText = displayValue.substring(0, 9);
+    if(displayValue.length > 6) {
+        display.innerText = displayValue.substring(0, 6);
     }
 }
   
@@ -103,8 +103,8 @@ function inputEquals() {
         //handles final result
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), secondOperator);
-        if(result === 'lmao') {
-            displayValue = 'lmao';
+        if(result === 'Error') {
+            displayValue = 'Erroe';
         } else {
             displayValue = roundAccurately(result, 15).toString();
             firstOperand = displayValue;
@@ -117,8 +117,8 @@ function inputEquals() {
         //handles first operation
         secondOperand = displayValue;
         result = operate(Number(firstOperand), Number(secondOperand), firstOperator);
-        if(result === 'lmao') {
-            displayValue = 'lmao';
+        if(result === 'Error') {
+            displayValue = 'Error';
         } else {
             displayValue = roundAccurately(result, 15).toString();
             firstOperand = displayValue;
@@ -172,7 +172,7 @@ function operate(x, y, op) {
         return x * y;
     } else if(op === '/') {
         if(y === 0) {
-            return 'lmao';
+            return 'Error';
         } else {
         return x / y;
         }
